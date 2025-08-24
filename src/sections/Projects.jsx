@@ -30,7 +30,7 @@ const ProjectsComponent = () => {
             subtitle: "Mobile Application",
             description: "A React Native mobile app streamlining canteen operations with order management, menu updates, and real-time notifications for both customers and staff.",
             tech: "React Native",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+            videoUrl: "/projectVid/mobileCanteen.mp4",
             githubUrl: "https://github.com/Kuladeep-Reddy-C/React-Native-Clerk-Auth",
             category: "Mobile",
             hasLive: false
@@ -40,7 +40,7 @@ const ProjectsComponent = () => {
             subtitle: "IoT Solution",
             description: "An Arduino-based safety system ensuring elevator door security with sensor integration, emergency protocols, and real-time monitoring capabilities.",
             tech: "Arduino",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+            videoUrl: "/projectVid/liftDoor.mp4",
             githubUrl: "https://github.com/username/lift-safety-system",
             category: "IoT",
             hasLive: false
@@ -50,7 +50,7 @@ const ProjectsComponent = () => {
             subtitle: "Premium Vehicle Website",
             description: "An elegant frontend showcase for luxury vehicles featuring stunning visuals, smooth animations, and intuitive navigation designed during 2nd semester.",
             tech: "HTML/CSS/JS",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+            videoUrl: "projectVid/CarsWebPage.mp4",
             githubUrl: "https://github.com/Kuladeep-Reddy-C/SEM-2-Project",
             liveUrl: "https://kuladeep-reddy-c.github.io/SEM-2-Project/new-home.html",
             category: "Frontend",
@@ -61,22 +61,12 @@ const ProjectsComponent = () => {
             subtitle: "Calendar Integration",
             description: "A seamless appointment booking system integrated with Google Calendar API, featuring automated scheduling, reminders, and conflict resolution.",
             tech: "Google Calendar API",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+            videoUrl: "/projectVid/AppointmentBooking.mp4",
             githubUrl: "https://github.com/Kuladeep-Reddy-C/Appointment-Booking",
             liveUrl: "https://appointment-booking-1-3irb.onrender.com/",
             category: "Integration",
             hasLive: true
         },
-        {
-            title: "Influencer Performance Monitor",
-            subtitle: "Analytics Dashboard",
-            description: "A comprehensive analytics platform tracking influencer performance metrics, engagement rates, and campaign effectiveness across multiple social media platforms.",
-            tech: "React & Analytics APIs",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
-            githubUrl: "https://github.com/Kuladeep-Reddy-C/TrendPulse",
-            category: "Analytics",
-            hasLive: false
-        }
     ];
 
     

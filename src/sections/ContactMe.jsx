@@ -10,6 +10,8 @@ const ContactComponent = () => {
         subject: '',
         message: ''
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
     const containerRef = useRef(null);
 
     useEffect(() => {
@@ -37,11 +39,52 @@ const ContactComponent = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        // Handle form submission here
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch('https://formspree.io/f/meoljzzg', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setIsSubmitted(true);
+                setFormData({
+                    name: '',
+                    phone: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                });
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
+
+    if (isSubmitted) {
+        return (
+            <div className="min-h-screen bg-black text-white flex items-center justify-center">
+                <div className="text-center">
+                    <h2 className="text-4xl font-bold text-green-500 mb-4">Thanks for reaching out!</h2>
+                    <p className="text-xl text-gray-300">We'll get back to you soon.</p>
+                    <button 
+                        onClick={() => setIsSubmitted(false)}
+                        className="mt-6 bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors"
+                    >
+                        Send Another Message
+                    </button>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div 
@@ -117,7 +160,6 @@ const ContactComponent = () => {
                                         onChange={handleInputChange}
                                         placeholder="Phone Number"
                                         className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all duration-300"
-                                        required
                                     />
                                 </div>
                             </div>
@@ -163,9 +205,10 @@ const ContactComponent = () => {
                                 <button
                                     type="button"
                                     onClick={handleSubmit}
-                                    className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 flex items-center justify-center space-x-2"
+                                    disabled={isSubmitting}
+                                    className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:scale-100"
                                 >
-                                    <span>LesssGooo</span>
+                                    <span>{isSubmitting ? 'Sending...' : 'LesssGooo'}</span>
                                     <Send size={20} />
                                 </button>
                             </div>

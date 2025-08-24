@@ -127,8 +127,8 @@ const SkillsComponent = () => {
                         <div className="text-gray-300 text-sm">Technologies Mastered</div>
                     </div>
                     <div className="text-center p-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl border border-green-500/30 hover:border-green-400/50 transition-all duration-300">
-                        <div className="text-2xl font-bold text-green-400 mb-1">100%</div>
-                        <div className="text-gray-300 text-sm">Dedication</div>
+                        <div className="text-2xl font-bold text-green-400 mb-1">3</div>
+                        <div className="text-gray-300 text-sm">In Campus Open Source</div>
                     </div>
                 </div>
             </div>

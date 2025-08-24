@@ -18,7 +18,7 @@ const HackathonComponent = () => {
             images: [
                 "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop",
                 "https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?w=800&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=400&fit=crop"
+                "https://media.istockphoto.com/id/1526986072/photo/airplane-flying-over-tropical-sea-at-sunset.jpg?s=612x612&w=0&k=20&c=Ccvg3BqlqsWTT0Mt0CvHlbwCuRjPAIWaCLMKSl3PCks="
             ],
             githubUrl: "https://github.com/Kuladeep-Reddy-C/GeoGuide",
             category: "AI/Travel"
@@ -33,9 +33,9 @@ const HackathonComponent = () => {
             tech: "MERN Stack, Clerk",
             award: "🏅 Top 8",
             images: [
-                "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1582560469781-1965b9af903d?w=800&h=400&fit=crop"
+                "/Hackathon/MediSphere/img1.png",
+                "/Hackathon/MediSphere/img1.png",
+                "/Hackathon/MediSphere/img1.png"
             ],
             githubUrl: "https://github.com/username/medisphere",
             category: "Healthcare"
